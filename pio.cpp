@@ -118,8 +118,13 @@ void parse(int argc, char **argv){
 	        abort ();
 		}
 	}
-	printf("s: %s, d: %s, chunk: %d, nflag: %d\n", sval, dval, atoi(cval), nflag);
-	work(sval, dval, nflag, atoi(cval));
+	//printf("s: %s, d: %s, chunk: %d, nflag: %d\n", sval, dval, atoi(cval), nflag);
+	if(cval!=NULL){
+	  work(sval, dval, nflag, atoi(cval));
+	}else{
+	  work(sval, dval, nflag, 1000000);
+	}
+
 }
 
 int main(int argc , char **argv){
