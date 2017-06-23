@@ -114,6 +114,7 @@ void parse(int argc, char **argv){
 	    	  	std::cout<<"Usage: "<<argv[0]<<" -s src -d dst -c chunksize [-n newname]"<<std::endl;
 	    	  	exit(0);
 	      default:
+		std::cout<<"Wrong flags/options Usage: "<<argv[0]<<" -s src -d dst -c chunksize [-n newname]"<<std::endl;
 	        abort ();
 		}
 	}
@@ -122,6 +123,10 @@ void parse(int argc, char **argv){
 }
 
 int main(int argc , char **argv){
+  if(argc <=1 ){
+    std::cout<<"please do "<<argv[0]<<" -h to see the usage"<<std::endl;
+    exit(0);
+  }
 	parse(argc, argv);
 }
 
