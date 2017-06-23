@@ -95,7 +95,7 @@ void parse(int argc, char **argv){
 	int chunkSize = 1e6; // 4MB chunksize
 	int index;
 
-	while ((c = getopt (argc, argv, "s:d:c:n")) != -1){
+	while ((c = getopt (argc, argv, "s:d:c:nh")) != -1){
 		switch (c)
 		{
 		case 's':
@@ -111,7 +111,7 @@ void parse(int argc, char **argv){
 	    	  	  nflag = 1;
 	    	  	  break;
 	      case 'h':
-	    	  	std::cout<<"Usage: "<<argv[0]<<" -s src -d dst -c chunksize "<<std::endl;
+	    	  	std::cout<<"Usage: "<<argv[0]<<" -s src -d dst -c chunksize [-n newname]"<<std::endl;
 	    	  	exit(0);
 	      default:
 	        abort ();

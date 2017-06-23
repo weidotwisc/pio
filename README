@@ -1,0 +1,5 @@
+Usage: ./pio -s src -d dst -c chunksize [-n newname]
+src: source file name
+dst: destination file name
+chunksize: how large a chunk to transmit
+newname (optional): add .rx (where x is the rank id) to the dst, useful when all nodes share a global file system
